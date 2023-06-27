@@ -8,12 +8,12 @@ const Button = styled.button`
     background-position: center;
     background-size: 40%;
     background-repeat: no-repeat;
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
     border: 0px;
     border-radius: 50%;
     position: absolute;
-    bottom: -33px;
+    bottom: -2.1rem;
 `;
 
 export default function GenerateButton() {

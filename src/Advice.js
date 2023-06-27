@@ -3,8 +3,6 @@ import { colors } from "./GlobalStyles";
 import mobileDivider from "./assets/pattern-divider-mobile.svg";
 import GenerateButton from "./GenerateButton";
 
-// TOOD: Mobile: Adjust vertical padding on main
-
 const Container = styled.div`
     text-align: center;
     display: flex;

@@ -13,7 +13,6 @@ export const GlobalStyle = createGlobalStyle`
         color: ${colors.text};
         background-color: ${colors.background};
         margin: 0;
-        height: 100vh;
     }
 
     #root, main {

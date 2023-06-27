@@ -10,7 +10,7 @@ const Main = styled.main`
     align-items: center;
     justify-content: flex-start;
     height: fit-content;
-    padding: 17.9vh 0 15vh;
+    padding: 17.9vh 0 25vh;
 `;
 
 export default function App() {
