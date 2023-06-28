@@ -9,7 +9,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     row-gap: 1.55rem;
-    padding: 40px 25px 56px;
+    padding: 2.5rem 1.3rem 3.9rem;
     background-color: ${colors.adviceBG};
     border-radius: 10px;
     margin: 0 1rem;
@@ -19,7 +19,11 @@ const Container = styled.div`
     position: relative;
 
     &::after {
-        content: url("${mobileDivider}");
+        content: "";
+        background-image: url("${mobileDivider}");
+        background-position: center;
+        height: 16px;
+        width: 100%;
         margin-top: -2px;
     }
 `;
