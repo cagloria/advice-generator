@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { GlobalStyle } from "./GlobalStyles";
 import Advice from "./Advice";
 
+// TODO: Complete README
+
 const Main = styled.main`
     display: flex;
     flex-direction: column;

@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { colors } from "./GlobalStyles";
 import icon from "./assets/icon-dice.svg";
 
+// TODO: Add button press functionality and float to Advice.js
+
 const Button = styled.button`
     background-color: ${colors.primary};
     background-image: url(${icon});
@@ -14,8 +16,19 @@ const Button = styled.button`
     border-radius: 50%;
     position: absolute;
     bottom: -2.1rem;
+    transition: box-shadow 0.4s ease-out, filter 0.4s ease-out;
+
+    &:hover {
+        box-shadow: ${colors.primaryGlow} 0rem 0rem 20px 11px;
+        cursor: pointer;
+    }
+
+    &:active {
+        box-shadow: ${colors.primaryGlow} 0rem 0rem 6px 6px;
+        filter: brightness(2.5);
+    }
 `;
 
 export default function GenerateButton() {
-    return <Button aria-label="Generate advice" />;
+    return <Button aria-label="Generate new quote" />;
 }
