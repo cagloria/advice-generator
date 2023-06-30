@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors } from "./GlobalStyles";
-import icon from "./assets/icon-dice.svg";
+import icon from "../assets/icon-dice.svg";
 
 // TODO: Add button press functionality and float to Advice.js
 

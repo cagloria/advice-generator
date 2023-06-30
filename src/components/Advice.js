@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "./GlobalStyles";
-import mobileDivider from "./assets/pattern-divider-mobile.svg";
-import desktopDivider from "./assets/pattern-divider-desktop.svg";
+import mobileDivider from "../assets/pattern-divider-mobile.svg";
+import desktopDivider from "../assets/pattern-divider-desktop.svg";
 import GenerateButton from "./GenerateButton";
 
 const Container = styled.div`
