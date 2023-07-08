@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors } from "./GlobalStyles";
 import mobileDivider from "../assets/pattern-divider-mobile.svg";
@@ -55,10 +56,10 @@ const Quote = styled.blockquote`
     margin: 0;
 
     &::before {
-        content: open-quote;
+        content: ${(props) => (props.needsQuoteMarks ? `open-quote` : ``)};
     }
     &::after {
-        content: close-quote;
+        content: ${(props) => (props.needsQuoteMarks ? `close-quote` : ``)};
     }
 
     @media screen and (min-width: 769px) {
@@ -66,17 +67,29 @@ const Quote = styled.blockquote`
     }
 `;
 
-export default function Advice({ id, quote }) {
+export default function Advice() {
+    const [id, setId] = useState(0);
+    const [quote, setQuote] = useState("");
+    const [quoteIsAvailable, setQuoteIsAvailable] = useState(false);
+
+    useEffect(() => {
+        setQuoteIsAvailable(quote.length > 0);
+    }, [quote]);
+
+    function handleClick() {
+        setId(117);
+        setQuote(
+            "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+        );
+    }
+
     return (
         <Container>
-            <Heading>Advice #{id}</Heading>
-            <Quote>{quote}</Quote>
-            <GenerateButton />
+            <Heading>{quoteIsAvailable ? `Advice ${id}` : ``}</Heading>
+            <Quote needsQuoteMarks={quoteIsAvailable}>
+                {quoteIsAvailable ? quote : `Generating quote...`}
+            </Quote>
+            <GenerateButton onClick={handleClick} />
         </Container>
     );
 }
-
-Advice.defaultProps = {
-    id: 117,
-    quote: "It is easy to sit up and take notice, what's difficult is getting up and taking action.",
-};

@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { colors } from "./GlobalStyles";
 import icon from "../assets/icon-dice.svg";
 
-// TODO: Add button press functionality and float to Advice.js
-
 const Button = styled.button`
     background-color: ${colors.primary};
     background-image: url(${icon});
@@ -29,6 +27,6 @@ const Button = styled.button`
     }
 `;
 
-export default function GenerateButton() {
-    return <Button aria-label="Generate new quote" />;
+export default function GenerateButton({ onClick }) {
+    return <Button aria-label="Generate new quote" onClick={onClick} />;
 }
